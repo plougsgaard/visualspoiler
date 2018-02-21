@@ -10,7 +10,6 @@ import 'rc-slider/assets/index.css'
 import UploadButton from './UploadButton'
 import CardView from './CardView'
 import extractCards from './extractCards'
-import testData from './testData'
 
 class App extends React.Component {
   state = {
@@ -33,7 +32,7 @@ class App extends React.Component {
           <Card style={{ position: 'absolute', top: '2em', left: '2em' }}>
             {!_.isEmpty(this.state.cards) && (
               <CardContent>
-                <Typography variant="headline" component="h2" style={{ marginBottom: '1em' }}>
+                <Typography variant='headline' component='h2' style={{ marginBottom: '1em' }}>
                   Card size
                 </Typography>
                 <Slider
@@ -45,7 +44,7 @@ class App extends React.Component {
               </CardContent>
             )}
             <CardActions>
-              <Button size="small" color="secondary" onClick={e => this.setState(_.set('show', false))}>Begone!</Button>
+              <Button size='small' color='secondary' onClick={e => this.setState(_.set('show', false))}>Begone!</Button>
               <UploadButton
                 buttonProps={{ size: 'small', color: 'primary' }}
                 onFileSelected={deck => this.setState(_.set('cards', extractCards(deck)))}>
