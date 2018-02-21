@@ -5,8 +5,8 @@ import sizeMe from 'react-sizeme'
 
 const W = 480
 const H = 680
-const COLOR1 = 'red'
-const COLOR2 = 'yellow'
+const COLOR1 = '#fdfdfd'
+const COLOR2 = '#ffff90'
 
 class CardView extends React.PureComponent {
   static propTypes = {
@@ -46,7 +46,8 @@ class CardView extends React.PureComponent {
               style={{
                 backgroundColor,
                 width: w,
-                height: h
+                height: h,
+                animation: 'fadein 2s'
               }}>
               <div
                 style={{ width: w, height: h, position: 'absolute', display: 'flex', alignItems: 'flex-end', justifyContent: 'center' }}>
@@ -60,9 +61,9 @@ class CardView extends React.PureComponent {
                     width: emblemWidth,
                     height: emblemWidth,
                     borderRadius: emblemWidth / 2,
-                    backgroundColor: 'rgba(255,255,255,0.26)',
+                    backgroundColor: 'hsla(23, 19%, 42%, 0.7)',
                     fontSize: `${Math.round(emblemWidth / 2)}px`,
-                    color: 'rgba(240, 240, 240, 0.7)'
+                    color: 'rgb(192, 189, 186)'
                   }}>
                     {count}
                   </div>
@@ -72,8 +73,8 @@ class CardView extends React.PureComponent {
                 className='block'
                 width={w}
                 height={h}
-                // src={`https://api.scryfall.com/cards/mtgo/${id}?format=image&version=border_crop`}
-                src={`${10035}.jpg`}
+                src={`https://api.scryfall.com/cards/mtgo/${id}?format=image&version=border_crop`}
+                // src={`${10035}.jpg`}
                 alt={id}
               />
             </div>

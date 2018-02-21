@@ -10,6 +10,15 @@ body {
   flex-wrap: wrap;
 }
 
+@keyframes fadein {
+  from {
+    opacity:0;
+  }
+  to {
+    opacity:1;
+  }
+}
+
 div.cover-page {
   display: flex;
   align-items: center;
