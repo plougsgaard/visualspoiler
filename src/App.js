@@ -25,7 +25,7 @@ class App extends React.Component {
   }
   render () {
     return (
-      <div>
+      <div className={_.isEmpty(this.state.cards) ? 'cover-page' : ''}>
         <Reboot />
         <CardView
           cards={this.state.cards}
