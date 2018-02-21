@@ -10,10 +10,6 @@ body {
   flex-wrap: wrap;
 }
 
-.block {
-
-}
-
 div.cover-page {
   display: flex;
   align-items: center;
