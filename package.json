@@ -2,6 +2,9 @@
   "name": "visualspoiler",
   "version": "0.1.0",
   "private": true,
+  "standard": {
+    "parser": "babel-eslint"
+  },
   "dependencies": {
     "lodash": "4.17.5",
     "material-ui": "1.0.0-beta.34",
