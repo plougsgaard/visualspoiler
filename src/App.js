@@ -41,7 +41,7 @@ class App extends React.Component {
           showNumberOfCardsEvenIfJustOne={this.state.showNumberOfCardsEvenIfJustOne}
         />
         {this.state.show && (
-          <Card style={{ position: 'absolute', top: '2em', left: '2em' }}>
+          <Card style={{ position: 'fixed', top: '2em', left: '2em' }}>
             {!_.isEmpty(this.state.cards) && (
               <CardContent>
                 <p>Size</p>
