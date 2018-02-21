@@ -11,10 +11,14 @@ const COLOR2 = 'yellow'
 class CardView extends React.PureComponent {
   static propTypes = {
     cards: PropTypes.array.isRequired,
-    cardWidthTarget: PropTypes.number
+    cardWidthTarget: PropTypes.number,
+    showNumberOfCards: PropTypes.bool,
+    showNumberOfCardsEvenIfJustOne: PropTypes.bool
   }
   static defaultProps = {
-    cardWidthTarget: 250
+    cardWidthTarget: 250,
+    showNumberOfCards: false,
+    showNumberOfCardsEvenIfJustOne: false
   }
   render () {
     const rowSize = Math.round(this.props.size.width / this.props.cardWidthTarget)
@@ -29,6 +33,9 @@ class CardView extends React.PureComponent {
             : evenIndex
               ? rowSize % 2 === 0 ? COLOR2 : COLOR1
               : rowSize % 2 === 0 ? COLOR1 : COLOR2
+          const showNumberOfCardsLabel = count > 1
+            ? this.props.showNumberOfCards
+            : this.props.showNumberOfCards && this.props.showNumberOfCardsEvenIfJustOne
 
           const w = this.props.size.width / rowSize
           const h = H * w / W
@@ -43,7 +50,7 @@ class CardView extends React.PureComponent {
               }}>
               <div
                 style={{ width: w, height: h, position: 'absolute', display: 'flex', alignItems: 'flex-end', justifyContent: 'center' }}>
-                {(count > 1) && (
+                {showNumberOfCardsLabel && (
                   <div style={{
                     boxShadow: '0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)',
                     display: 'flex',
