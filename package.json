@@ -6,7 +6,8 @@
     "lodash": "4.17.5",
     "prop-types": "15.6.0",
     "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "react-dom": "^16.2.0",
+    "react-sizeme": "2.3.6"
   },
   "devDependencies": {
     "react-scripts": "1.1.1"
