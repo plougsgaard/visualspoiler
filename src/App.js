@@ -26,6 +26,13 @@ class App extends React.Component {
   render () {
     return (
       <div className={_.isEmpty(this.state.cards) ? 'cover-page' : ''}>
+        {_.isEmpty(this.state.cards) && (
+          <div style={{ maxWidth: '450px' }}>
+            <h1>This is the first challenge</h1>
+
+            <p><i>Its diet consists of fruits, plants, small woodland animals, large woodland animals, woodlands, fruit groves, fruit farmers, and small cities.</i></p>
+          </div>
+        )}
         <Reboot />
         <CardView
           cards={this.state.cards}
